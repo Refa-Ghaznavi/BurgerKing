@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_start">
+
+    <fragment
+        android:id="@+id/fragment_start"
+        android:name="dev.refa.burgerking.fragment_start"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_fragment_start_to_fragment_flavor"
+            app:destination="@id/fragment_flavor" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_flavor"
+        android:name="dev.refa.burgerking.fragment_flavor"
+        android:label="fragment_flavor"
+        tools:layout="@layout/fragment_flavor" >
+        <action
+            android:id="@+id/action_fragment_flavor_to_fragment_start"
+            app:destination="@id/fragment_start" />
+        <action
+            android:id="@+id/action_fragment_flavor_to_fragment_pickup"
+            app:destination="@id/fragment_pickup" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_pickup"
+        android:name="dev.refa.burgerking.fragment_pickup"
+        android:label="fragment_pickup"
+        tools:layout="@layout/fragment_pickup" >
+        <action
+            android:id="@+id/action_fragment_pickup_to_fragment_summary"
+            app:destination="@id/fragment_summary" />
+        <action
+            android:id="@+id/action_fragment_pickup_to_fragment_start"
+            app:destination="@id/fragment_start" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_summary"
+        android:name="dev.refa.burgerking.fragment_summary"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/action_fragment_summary_to_fragment_start"
+            app:destination="@id/fragment_start" />
+    </fragment>
+</navigation>
