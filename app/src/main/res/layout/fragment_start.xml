@@ -1,14 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Layout for starting a new order -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragment_start">
+    tools:context=".StartFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="startFragment"
+            type="dev.refa.burgerking.StartFragment" />
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/side_margin">
+
+            <ImageView
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:importantForAccessibility="no"
+                android:scaleType="center"
+                app:srcCompat="@drawable/cupcake" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/side_margin"
+                android:text="@string/order_cupcakes"
+                android:textAppearance="?attr/textAppearanceHeadline4"
+                android:textColor="@color/material_on_background_emphasis_medium" />
+
+            <Button
+                android:id="@+id/order_one_cupcake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/order_cupcake_button_width"
+                android:onClick="@{() -> startFragment.orderCupcake(1)}"
+                android:text="@string/one_cupcake" />
+
+            <Button
+                android:id="@+id/order_six_cupcakes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/order_cupcake_button_width"
+                android:onClick="@{() -> startFragment.orderCupcake(6)}"
+                android:text="@string/six_cupcakes" />
+
+            <Button
+                android:id="@+id/order_twelve_cupcakes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/order_cupcake_button_width"
+                android:onClick="@{() -> startFragment.orderCupcake(12)}"
+                android:text="@string/twelve_cupcakes" />
+        </LinearLayout>
+    </ScrollView>
+</layout>
