@@ -16,16 +16,16 @@ private const val PRICE_PER_CUPCAKE = 2.00
 private const val PRICE_FOR_SAME_DAY_PICKUP = 3.00
 
 /**
- * [OrderViewModel] holds information about a cupcake order in terms of quantity, flavor, and
+ * [OrderViewModel] holds information about a cupcake order in terms of quantity, type, and
  * pickup date. It also knows how to calculate the total price based on these order details.
  */
 class OrderViewModel : ViewModel() {
 
-    // Quantity of cupcakes in this order
+    // Quantity of burgers in this order
     private val _quantity = MutableLiveData<Int>()
     val quantity: LiveData<Int> = _quantity
 
-    // Cupcake flavor for this order
+    // Cupcake type for this order
     private val _flavor = MutableLiveData<String>()
     val flavor: LiveData<String> = _flavor
 
@@ -49,7 +49,7 @@ class OrderViewModel : ViewModel() {
     }
 
     /**
-     * Set the quantity of cupcakes for this order.
+     * Set the quantity of burgers for this order.
      *
      * @param numberCupcakes to order
      */
@@ -59,9 +59,9 @@ class OrderViewModel : ViewModel() {
     }
 
     /**
-     * Set the flavor of cupcakes for this order. Only 1 flavor can be selected for the whole order.
+     * Set the type of burgers for this order. Only 1 type can be selected for the whole order.
      *
-     * @param desiredFlavor is the cupcake flavor as a string
+     * @param desiredFlavor is the cupcake type as a string
      */
     fun setFlavor(desiredFlavor: String) {
         _flavor.value = desiredFlavor
@@ -78,14 +78,14 @@ class OrderViewModel : ViewModel() {
     }
 
     /**
-     * Returns true if a flavor has not been selected for the order yet. Returns false otherwise.
+     * Returns true if a type has not been selected for the order yet. Returns false otherwise.
      */
     fun hasNoFlavorSet(): Boolean {
         return _flavor.value.isNullOrEmpty()
     }
 
     /**
-     * Reset the order by using initial default values for the quantity, flavor, date, and price.
+     * Reset the order by using initial default values for the quantity, type, date, and price.
      */
     fun resetOrder() {
         _quantity.value = 0

@@ -3,6 +3,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary_background"
     tools:context=".StartFragment">
 
     <data>
@@ -28,14 +29,14 @@
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:importantForAccessibility="no"
                 android:scaleType="center"
-                app:srcCompat="@drawable/cupcake" />
+                app:srcCompat="@drawable/burgerking" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="@dimen/side_margin"
-                android:text="@string/order_cupcakes"
+                android:text="@string/order_burgers"
                 android:textAppearance="?attr/textAppearanceHeadline4"
                 android:textColor="@color/material_on_background_emphasis_medium" />
 
@@ -45,9 +46,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/margin_between_elements"
-                android:minWidth="@dimen/order_cupcake_button_width"
+                android:minWidth="@dimen/order_burger_button_width"
                 android:onClick="@{() -> startFragment.orderCupcake(1)}"
-                android:text="@string/one_cupcake" />
+                android:text="@string/one_burger" />
 
             <Button
                 android:id="@+id/order_six_cupcakes"
@@ -55,9 +56,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/margin_between_elements"
-                android:minWidth="@dimen/order_cupcake_button_width"
+                android:minWidth="@dimen/order_burger_button_width"
                 android:onClick="@{() -> startFragment.orderCupcake(6)}"
-                android:text="@string/six_cupcakes" />
+                android:text="@string/six_burgers" />
 
             <Button
                 android:id="@+id/order_twelve_cupcakes"
@@ -65,9 +66,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/margin_between_elements"
-                android:minWidth="@dimen/order_cupcake_button_width"
+                android:minWidth="@dimen/order_burger_button_width"
                 android:onClick="@{() -> startFragment.orderCupcake(12)}"
-                android:text="@string/twelve_cupcakes" />
+                android:text="@string/twelve_burgers" />
         </LinearLayout>
     </ScrollView>
 </layout>

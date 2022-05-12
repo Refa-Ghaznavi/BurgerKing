@@ -2,6 +2,7 @@
 <!-- Layout for selecting a pickup date -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary_background"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".PickupFragment">
 

@@ -11,12 +11,12 @@
         tools:layout="@layout/fragment_start">
         <action
             android:id="@+id/action_startFragment_to_flavorFragment"
-            app:destination="@id/flavorFragment" />
+            app:destination="@id/burgerTypeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/flavorFragment"
+        android:id="@+id/burgerTypeFragment"
         android:name="dev.refa.burgerking.FlavorFragment"
-        android:label="@string/choose_flavor"
+        android:label="@string/types_of_burgers"
         tools:layout="@layout/fragment_flavor">
         <action
             android:id="@+id/action_flavorFragment_to_pickupFragment"

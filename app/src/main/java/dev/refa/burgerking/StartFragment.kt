@@ -11,7 +11,7 @@ import dev.refa.burgerking.databinding.FragmentStartBinding
 import dev.refa.burgerking.model.OrderViewModel
 
 /**
- * This is the first screen of the Cupcake app. The user can choose how many cupcakes to order.
+ * This is the first screen of the Cupcake app. The user can choose how many burgers to order.
  */
 class StartFragment : Fragment() {
 
@@ -38,18 +38,18 @@ class StartFragment : Fragment() {
     }
 
     /**
-     * Start an order with the desired quantity of cupcakes and navigate to the next screen.
+     * Start an order with the desired quantity of burgers and navigate to the next screen.
      */
     fun orderCupcake(quantity: Int) {
         // Update the view model with the quantity
         sharedViewModel.setQuantity(quantity)
 
-        // If no flavor is set in the view model yet, select vanilla as default flavor
+        // If no type is set in the view model yet, select beef_burgers as default type
         if (sharedViewModel.hasNoFlavorSet()) {
-            sharedViewModel.setFlavor(getString(R.string.vanilla))
+            sharedViewModel.setFlavor(getString(R.string.beef_burgers))
         }
 
-        // Navigate to the next destination to select the flavor of the cupcakes
+        // Navigate to the next destination to select the type of the burgers
         findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
     }
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary_background"
     tools:context=".SummaryFragment">
 
     <data>
@@ -62,7 +63,7 @@
                     style="@style/Widget.BurgerKing.TextView.Label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/flavor" />
+                    android:text="@string/type" />
 
                 <TextView
                     android:id="@+id/flavor"
@@ -71,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
                     android:text="@{viewModel.flavor}"
-                    tools:text="Chocolate" />
+                    tools:text="Beef Burgers" />
 
                 <View
                     android:id="@+id/divider2"

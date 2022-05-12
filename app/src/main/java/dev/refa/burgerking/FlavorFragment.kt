@@ -12,7 +12,7 @@ import dev.refa.burgerking.model.OrderViewModel
 
 
 /**
- * [FlavorFragment] allows a user to choose a cupcake flavor for the order.
+ * [FlavorFragment] allows a user to choose a cupcake type for the order.
  */
 class FlavorFragment : Fragment() {
 
